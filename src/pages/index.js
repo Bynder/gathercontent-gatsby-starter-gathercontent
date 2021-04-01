@@ -34,7 +34,7 @@ function IndexPage({ data }) {
                 </h2>
               </Link>
               {edges.map((child) => (
-                <div key={child.id}>
+                <div key={child.node.id}>
                   <div>
                     <div className="grid grid-cols-12 text-left font-medium px-4 uppercase text-base-1">
                       <div className="col-span-6 text-xs">Course Name</div>
@@ -70,7 +70,7 @@ function IndexPage({ data }) {
         </Main>
       </Wrapper>
 
-      <style jsx>{`
+      <style>{`
         .id-header {
           scroll-margin-top: 1.5rem;
         }
@@ -91,9 +91,14 @@ export const query = graphql`
             optimisedImageUrl
           }
         }
+        metadata {
+          title
+          keywords
+          description
+        }
       }
     }
-    allGathercontentItems(sort: {fields: position}, filter: {status: {slug: {eq: "live-and-ready-for-review"}}, itemContent: {taxonomy: {tags: {elemMatch: {label: {eq: "Promotion"}}}}}}) {
+    allGathercontentItems(sort: {fields: position}, filter: {status: {slug: {eq: "live"}}, itemContent: {taxonomy: {tags: {elemMatch: {label: {eq: "Promotion"}}}}}}) {
       group(field: folder___id) {
         edges {
           node {

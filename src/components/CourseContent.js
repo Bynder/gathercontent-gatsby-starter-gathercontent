@@ -16,7 +16,7 @@ const Content = ({ content }) => (
       dangerouslySetInnerHTML={{ __html: content }}
       className="prose lg:prose-xl"
     />
-    <style jsx>{`
+    <style>{`
       .content :global(p) {
         margin-bottom: 1rem;
         font-size: 1.125rem;

@@ -136,7 +136,7 @@ function Header({ shadow = false }) {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .logo {
           line-height: 20px;
         }

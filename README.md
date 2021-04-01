@@ -1,3 +1,5 @@
+!['GatherContent & Gatsby'](hero.png)
+
 # gatsby-starter-gathercontent
 
 ## Getting Started
@@ -46,8 +48,14 @@ You can manually rebuild the project by re-running `npm run develop` or you can 
 
 By using the refresh command, you won't need to manually restart your development server saving you time 👍
 
+### Query guide
+
+The GatherContent source plugin includes a [guide on sourcing data](https://github.com/gathercontent/gatsby-source-gathercontent/blob/main/docs/sourcing-from-gathercontent.md) from GatherContent. 
+
+It is recommended that you read the guide to better understand the schema.
+
 ## More reading
 
+- [Sourcing from GatherContent](https://github.com/gathercontent/gatsby-source-gathercontent/blob/main/docs/sourcing-from-gathercontent.md) - a guide on querying with GatherContent.
 - [GatherContent source plugin](https://github.com/gathercontent/gatsby-source-gathercontent)
-- [Sourcing from GatherContent](https://github.com/gathercontent/gatsby-source-gathercontent/docs/sourcing-from-gathercontent.md) - a guide on querying with GatherContent.
 - [gathercontent.js](https://github.com/gathercontent/gathercontent.js) - a helper library for getting content from GatherContent

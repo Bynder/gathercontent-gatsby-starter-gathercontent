@@ -26,6 +26,12 @@ function CoursesPage({ data }) {
             pageHeading={pageContent.pageHeading}
             intro={pageContent.description}
           />
+          <div className="grid grid-cols-12 text-left font-medium px-4 uppercase text-base-1">
+            <div className="col-span-6 text-xs">Course Name</div>
+            <div className="col-span-2 text-xs">Credits</div>
+            <div className="col-span-2 text-xs">Hours</div>
+            <div className="col-span-2 text-xs">Weeks</div>
+          </div>
           <ul className="mb-8">
             {data.allGathercontentItems.nodes.map((course) => (
               <li key={course.id} className="">
@@ -73,7 +79,7 @@ export const query = graphql`
         }
       }
     }
-    allGathercontentItems(filter: {template: {slug: {eq: "course-record"}}, folder: {slug: {eq: $slug}}, status: {slug: {eq: "live-and-ready-for-review"}}}) {
+    allGathercontentItems(filter: {template: {slug: {eq: "course-record"}}, folder: {slug: {eq: $slug}}, status: {slug: {eq: "live"}}}) {
       nodes {
         id
         name

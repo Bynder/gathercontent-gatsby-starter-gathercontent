@@ -1,25 +1,28 @@
 import * as React from 'react';
+import { Helmet } from "react-helmet"
 
 const defaultMetadata = {
-  title: 'GatherContent University',
-  description: '',
-  keywords: '',
+  metadata: {
+    title: 'GatherContent University',
+    description: '',
+    keywords: '',
+  }
 }
 
-function Site({ children, siteMetadata = defaultMetadata }) {
+function Site({ children, data }) {
+  const { metadata } = data?.gathercontentItems?.itemContent || defaultMetadata;
+
   return (
-    <html lang="en">
-      <head>
-        <title>{siteMetadata?.title}</title>
-        <meta name="description" content={siteMetadata?.description} />
-        <meta name="keywords" content={siteMetadata?.keywords} />
+    <>
+      <Helmet>
+        <title>{metadata?.title}</title>
+        <meta name="description" content={metadata?.description} />
+        <meta name="keywords" content={metadata?.keywords} />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-      <body>
-        {children}
-      </body>
-    </html>
+      </Helmet>
+      {children}
+    </>
   )
 }
 

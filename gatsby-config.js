@@ -5,6 +5,7 @@ require("dotenv").config({
 module.exports = {
     flags: { PRESERVE_WEBPACK_CACHE: true },
     plugins: [
+        `gatsby-plugin-react-helmet`,
         `gatsby-plugin-postcss`,
         {
             resolve: "gatsby-source-gathercontent",
@@ -13,16 +14,6 @@ module.exports = {
                 apiKey: process.env.GATSBY_GC_API_KEY,
                 projectId: process.env.GATSBY_GC_PROJECT_ID,
             },
-        },
-        {
-            resolve: `gatsby-plugin-page-creator`,
-            options: {
-                path: `${__dirname}/src/pages`,
-                ignore: {
-                    // Example: Ignore `file.example.js`, `dir/s/file.example.tsx`
-                    patterns: [`node_modules`],
-                },
-            },
-        },
+        }
     ]
 }
