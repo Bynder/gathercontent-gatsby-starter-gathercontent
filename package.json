@@ -22,7 +22,7 @@
   "dependencies": {
     "@tailwindui/react": "^0.1.1",
     "classnames": "^2.2.6",
-    "gatsby": "^3.1.2",
+    "gatsby": "5.14.4",
     "gatsby-plugin-postcss": "^4.1.0",
     "gatsby-plugin-react-helmet": "^4.2.0",
     "gatsby-source-gathercontent": "^0.2.3",
@@ -30,7 +30,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "3.0.9"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.0"
